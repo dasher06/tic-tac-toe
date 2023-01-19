@@ -1,0 +1,108 @@
+import random
+print("Bot: This is tic tac toe ")
+a=input("Bot: Enter your name ")
+print("Bot: Do you want to play tic tac toe",a,"?")
+b=input("(y/n) ")
+b=b.lower()
+p1=""
+c1=""
+c2=""
+c3=""
+c4=""
+c5=""
+c6=""
+c7=""
+c8=""
+c9=""
+l=[1,2,3,4,5,6,7,8,9]
+if b=="y" or b=="yes":
+    print("Bot: This is how the box looks")
+    print("Bot: Here you can see 9 places where numbers are printed")
+    print("Bot: So, if you enter 1 the box that is filled with 1 will be your sign")
+    print("-------------")
+    print("| X | 2 | 3 |")
+    print("-------------")
+    print("| 4 | 5 | 6 |")
+    print("-------------")
+    print("| 7 | 8 | 9 |")
+    print("-------------")
+    print("Bot: You have your default has" " X")
+    print("Bot: What mode you want to play(1st or 2nd): ")
+    print("Bot: Enter (c) for 1st mode and any other string(alphabet) for 2nd mode")
+    c=input(a+": ")
+    c=c.lower()
+    if c=="c":
+        print("Bot: 1st mode")
+        b=l.index(p1)
+        l.pop(b)
+        p2=random.choice(l)
+        b=l.index(p1)
+        l.pop(b)
+    else:
+        print("Bot: 2nd mode")
+        n=input("Bot: Enter your name ")
+        print("Play it's 2nd players turn")
+        print("-------------")
+        print("| 1 | 2 | 3 |")
+        print("-------------")
+        print("| 4 | 5 | 6 |")
+        print("-------------")
+        print("| 7 | 8 | 9 |")
+        print("-------------")
+        p2=int(input(n+":"))
+    while True:
+        p2=p2
+        if p2==1:
+            c1="O"
+        elif p2==2:
+            c2="O"
+        elif p2==3:
+            c3="O"
+        elif p2==4:
+            c4="O"
+        elif p2==5:
+            c5="O"
+        elif p2==6:
+            c6="O"
+        elif p2==7:
+            c7="O"
+        elif p2==8:
+            c8="O"
+        elif p2==9:
+            c9="O"
+        print("----------")
+        print("|",c1,"|",c2,"|",c3,"|")
+        print("----------")
+        print("|",c4,"|",c5,"|",c6,"|")
+        print("----------")
+        print("|",c7,"|",c8,"|",c9,"|")
+        print("----------")
+        p1=int(input(a+": "))
+        if p1==1:
+            c1="X"
+        elif p1==2:
+            c2="X"
+        elif p1==3:
+            c3="X"
+        elif p1==4:
+            c4="X"
+        elif p1==5:
+            c5="X"
+        elif p1==6:
+            c6="X"
+        elif p1==7:
+            c7="X"
+        elif p1==8:
+            c8="X"
+        elif p1==9:
+            c9="X"
+        else:
+            print("Wrong input")
+            break
+        print("----------")
+        print("|",c1,"|",c2,"|",c3,"|")
+        print("----------")
+        print("|",c4,"|",c5,"|",c6,"|")
+        print("----------")
+        print("|",c7,"|",c8,"|",c9,"|")
+        print("----------")
