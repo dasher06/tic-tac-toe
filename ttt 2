@@ -1,5 +1,5 @@
 import random
-print("Bot: This is tic tac toe ")
+print("Bot: This is tic tac toe game!!")
 a=input("Bot: Enter your name ")
 print("Bot: Do you want to play tic tac toe",a,"?")
 b=input("(y/n) ")
@@ -19,7 +19,7 @@ l=[1,2,3,4,5,6,7,8,9]
 if b=="y" or b=="yes":
     print("Bot: This is how the box looks")
     print("Bot: Here you can see 9 places where numbers are printed")
-    print("Bot: So, if you enter 1 the box that is filled with 1 will be your sign")
+    print("Bot: So, if you enter 1 the box that is filled with 1 will be your sign(X)")
     print("-------------")
     print("| X | 2 | 3 |")
     print("-------------")
@@ -27,272 +27,284 @@ if b=="y" or b=="yes":
     print("-------------")
     print("| 7 | 8 | 9 |")
     print("-------------")
-    print("Bot: You have your default has" " X")
-    print("Bot: What mode you want to play 1st mode or 2nd mode: ")
-    print("Bot: 1st mode(computer vs player) and 2nd mode(player1 vs player2)")
-    print("Bot: Enter any string(alphabet) for 1st mode and (P) for 2nd mode")
-    c=input(a+": ")
-    c=c.lower()
-    if c=="p":
-        print("Bot: 2nd mode")
-        n=input("Bot: Enter 2nd player's name ")
-        print("Play it's ",n,"'s turn")
-        print("-------------")
-        print("| 1 | 2 | 3 |")
-        print("-------------")
-        print("| 4 | 5 | 6 |")
-        print("-------------")
-        print("| 7 | 8 | 9 |")
-        print("-------------")
-        while True:
-            p2=int(input(n+":"))
-            print(p2)
-            if p2==1:
-                c1="O"
-            elif p2==2:
-                c2="O"
-            elif p2==3:
-                c3="O"
-            elif p2==4:
-                c4="O"
-            elif p2==5:
-                c5="O"
-            elif p2==6:
-                c6="O"
-            elif p2==7:
-                c7="O"
-            elif p2==8:
-                c8="O"
-            elif p2==9:
-                c9="O"
-            print("----------")
-            print("|",c1,"|",c2,"|",c3,"|")
-            print("----------")
-            print("|",c4,"|",c5,"|",c6,"|")
-            print("----------")
-            print("|",c7,"|",c8,"|",c9,"|")
-            print("----------")
-            if c1=="O":
-                if c2=="O" and c3=="O":
-                    print(n," is the winner!!")
+    while True:
+        print("Bot: What mode you want to play 1st mode or 2nd mode: ")
+        print("Bot: 1st mode(computer vs player) and 2nd mode(player1 vs player2)")
+        print("Bot: Enter any string(alphabet) for 1st mode and (A) for 2nd mode")
+        c=input(a+": ")
+        c=c.lower()
+        if c=="a":
+            print("Bot: You chose 2nd mode")
+            n=input("Bot: Enter 2nd player's name ")
+            print("Play it's ",n,"'s turn")
+            print("-------------")
+            print("| 1 | 2 | 3 |")
+            print("-------------")
+            print("| 4 | 5 | 6 |")
+            print("-------------")
+            print("| 7 | 8 | 9 |")
+            print("-------------")
+            while True:
+                p2=int(input(n+":"))
+                print(p2)
+                if p2==1:
+                    c1="O"
+                elif p2==2:
+                    c2="O"
+                elif p2==3:
+                    c3="O"
+                elif p2==4:
+                    c4="O"
+                elif p2==5:
+                    c5="O"
+                elif p2==6:
+                    c6="O"
+                elif p2==7:
+                    c7="O"
+                elif p2==8:
+                    c8="O"
+                elif p2==9:
+                    c9="O"
+                print("----------")
+                print("|",c1,"|",c2,"|",c3,"|")
+                print("----------")
+                print("|",c4,"|",c5,"|",c6,"|")
+                print("----------")
+                print("|",c7,"|",c8,"|",c9,"|")
+                print("----------")
+                if c1=="O":
+                    if c2=="O" and c3=="O":
+                        print(n," is the winner!!")
+                        break
+                    if c4=="O" and c7=="O":
+                        print(n," is the winner!!")
+                        break
+                    if c5=="O" and c9=="O":
+                        print(n," is the winner!!")
+                        break
+                elif c2=="O":
+                    if c5=="O" and c8=="O":
+                        print(n," is the winner!!")
+                        break
+                elif c3=="O":
+                    if c6=="O" and c9=="O":
+                        print(n," is the winner!!")
+                        break
+                    if c5=="O" and c7=="O":
+                        print(n," is the winner!!")
+                        break
+                elif c7=="O":
+                    if c8=="O" and c9=="O":
+                        print(n," is the winner!!")
+                        break
+                elif c4=="O":
+                    if c5=="O" and c6=="O":
+                        print(n," is the winner!!")
+                        break
+                b=l.index(p2)
+                l.pop(b)
+                p1=int(input(a+": "))
+                c=l.index(p1)
+                l.pop(c)
+                if p1==1:
+                    c1="X"
+                elif p1==2:
+                    c2="X"
+                elif p1==3:
+                    c3="X"
+                elif p1==4:
+                    c4="X"
+                elif p1==5:
+                    c5="X"
+                elif p1==6:
+                    c6="X"
+                elif p1==7:
+                    c7="X"
+                elif p1==8:
+                    c8="X"
+                elif p1==9:
+                    c9="X"
+                else:
+                    print("Wrong input")
                     break
-                if c4=="O" and c7=="O":
-                    print(n," is the winner!!")
+                print("----------")
+                print("|",c1,"|",c2,"|",c3,"|")
+                print("----------")
+                print("|",c4,"|",c5,"|",c6,"|")
+                print("----------")
+                print("|",c7,"|",c8,"|",c9,"|")
+                print("----------")
+                if c1=="X":
+                    if c2=="X" and c3=="X":
+                        print(a,"is the winnner!!")
+                        break
+                    if c4=="X" and c7=="X":
+                        print(a,"is the winnner!!")
+                        break
+                    if c5=="X" and c9=="X":
+                        print(a,"is the winnner!!")
+                        break
+                elif c2=="X":
+                    if c5=="X" and c8=="X":
+                        print(a,"is the winnner!!")
+                        break
+                elif c3=="X":
+                    if c6=="X" and c9=="X":
+                        print(a,"is the winnner!!")
+                        break
+                    if c5=="X" and c7=="X":
+                        print(a,"is the winnner!!")
+                        break
+                elif c7=="X":
+                    if c8=="X" and c9=="X":
+                        print(a,"is the winnner!!")
+                        break
+                elif c4=="X":
+                    if c5=="X" and c6=="X":
+                        print(a,"is the winnner!!")
+                        break
+        else:
+            print("Bot: You chose 1st mode")
+            print("Bot: Play ",a)
+            print("-------------")
+            print("| 1 | 2 | 3 |")
+            print("-------------")
+            print("| 4 | 5 | 6 |")
+            print("-------------")
+            print("| 7 | 8 | 9 |")
+            print("-------------")  
+            while True:
+                p1=int(input(a+": "))
+                if p1==1:
+                    c1="X"
+                elif p1==2:
+                    c2="X"
+                elif p1==3:
+                    c3="X"
+                elif p1==4:
+                    c4="X"
+                elif p1==5:
+                    c5="X"
+                elif p1==6:
+                    c6="X"
+                elif p1==7:
+                    c7="X"
+                elif p1==8:
+                    c8="X"
+                elif p1==9:
+                    c9="X"
+                else:
+                    print("Wrong input")
                     break
-                if c5=="O" and c9=="O":
-                    print(n," is the winner!!")
-                    break
-            elif c2=="O":
-                if c5=="O" and c8=="O":
-                    print(n," is the winner!!")
-                    break
-            elif c3=="O":
-                if c6=="O" and c9=="O":
-                    print(n," is the winner!!")
-                    break
-                if c5=="O" and c7=="O":
-                    print(n," is the winner!!")
-                    break
-            elif c7=="O":
-                if c8=="O" and c9=="O":
-                    print(n," is the winner!!")
-                    break
-            elif c4=="O":
-                if c5=="O" and c6=="O":
-                    print(n," is the winner!!")
-                    break
-            b=l.index(p2)
-            l.pop(b)
-            p1=int(input(a+": "))
-            c=l.index(p1)
-            l.pop(c)
-            if p1==1:
-                c1="X"
-            elif p1==2:
-                c2="X"
-            elif p1==3:
-                c3="X"
-            elif p1==4:
-                c4="X"
-            elif p1==5:
-                c5="X"
-            elif p1==6:
-                c6="X"
-            elif p1==7:
-                c7="X"
-            elif p1==8:
-                c8="X"
-            elif p1==9:
-                c9="X"
-            else:
-                print("Wrong input")
-                break
-            print("----------")
-            print("|",c1,"|",c2,"|",c3,"|")
-            print("----------")
-            print("|",c4,"|",c5,"|",c6,"|")
-            print("----------")
-            print("|",c7,"|",c8,"|",c9,"|")
-            print("----------")
-            if c1=="X":
-                if c2=="X" and c3=="X":
-                    print(a,"is the winnner!!")
-                    break
-                if c4=="X" and c7=="X":
-                    print(a,"is the winnner!!")
-                    break
-                if c5=="X" and c9=="X":
-                    print(a,"is the winnner!!")
-                    break
-            elif c2=="X":
-                if c5=="X" and c8=="X":
-                    print(a,"is the winnner!!")
-                    break
-            elif c3=="X":
-                if c6=="X" and c9=="X":
-                    print(a,"is the winnner!!")
-                    break
-                if c5=="X" and c7=="X":
-                    print(a,"is the winnner!!")
-                    break
-            elif c7=="X":
-                if c8=="X" and c9=="X":
-                    print(a,"is the winnner!!")
-                    break
-            elif c4=="X":
-                if c5=="X" and c6=="X":
-                    print(a,"is the winnner!!")
-                    break
-    else:
-        print("Bot: 2nd mode")
-        print("Bot: Play ",a)
-        print("-------------")
-        print("| 1 | 2 | 3 |")
-        print("-------------")
-        print("| 4 | 5 | 6 |")
-        print("-------------")
-        print("| 7 | 8 | 9 |")
-        print("-------------")  
-        while True:
-            p1=int(input(a+": "))
-            if p1==1:
-                c1="X"
-            elif p1==2:
-                c2="X"
-            elif p1==3:
-                c3="X"
-            elif p1==4:
-                c4="X"
-            elif p1==5:
-                c5="X"
-            elif p1==6:
-                c6="X"
-            elif p1==7:
-                c7="X"
-            elif p1==8:
-                c8="X"
-            elif p1==9:
-                c9="X"
-            else:
-                print("Wrong input")
-                break
-            print("----------")
-            print("|",c1,"|",c2,"|",c3,"|")
-            print("----------")
-            print("|",c4,"|",c5,"|",c6,"|")
-            print("----------")
-            print("|",c7,"|",c8,"|",c9,"|")
-            print("----------")
-            if c1=="X":
-                if c2=="X" and c3=="X":
-                    print(a,"is the winnner!!")
-                    break
-                if c4=="X" and c7=="X":
-                    print(a,"is the winnner!!")
-                    break
-                if c5=="X" and c9=="X":
-                    print(a,"is the winnner!!")
-                    break
-            elif c2=="X":
-                if c5=="X" and c8=="X":
-                    print(a,"is the winnner!!")
-                    break
-            elif c3=="X":
-                if c6=="X" and c9=="X":
-                    print(a,"is the winnner!!")
-                    break
-                if c5=="X" and c7=="X":
-                    print(a,"is the winnner!!")
-                    break
-            elif c7=="X":
-                if c8=="X" and c9=="X":
-                    print(a,"is the winnner!!")
-                    break
-            elif c4=="X":
-                if c5=="X" and c6=="X":
-                    print(a,"is the winnner!!")
-                    break
-            b=l.index(p1)
-            l.pop(b)
-            p2=random.choice(l)
-            c=l.index(p2)
-            l.pop(c)
-            print(p2)
-            if p2==1:
-                c1="O"
-            elif p2==2:
-                c2="O"
-            elif p2==3:
-                c3="O"
-            elif p2==4:
-                c4="O"
-            elif p2==5:
-                c5="O"
-            elif p2==6:
-                c6="O"
-            elif p2==7:
-                c7="O"
-            elif p2==8:
-                c8="O"
-            elif p2==9:
-                c9="O"
-            print("----------")
-            print("|",c1,"|",c2,"|",c3,"|")
-            print("----------")
-            print("|",c4,"|",c5,"|",c6,"|")
-            print("----------")
-            print("|",c7,"|",c8,"|",c9,"|")
-            print("----------")
-            if c1=="O":
-                if c2=="O" and c3=="O":
-                    print("Bot is the winnner!!")
-                    break
-                if c4=="O" and c7=="O":
-                    print("Bot is the winner!!")
-                    break
-                if c5=="O" and c9=="O":
-                    print("Bot is the winner!!")
-                    break
-            elif c2=="O":
-                if c5=="O" and c8=="O":
-                    print("Bot is the winner!!")
-                    break
-            elif c3=="O":
-                if c6=="O" and c9=="O":
-                    print("Bot is the winner!!")
-                    break
-                if c5=="O" and c7=="O":
-                    print("Bot is the winner!!")
-                    break
-            elif c7=="O":
-                if c8=="O" and c9=="O":
-                    print("Bot is the winner!!")
-                    break
-            elif c4=="O":
-                if c5=="O" and c6=="O":
-                    print("Bot is the winner!!")
-                    break
+                print("----------")
+                print("|",c1,"|",c2,"|",c3,"|")
+                print("----------")
+                print("|",c4,"|",c5,"|",c6,"|")
+                print("----------")
+                print("|",c7,"|",c8,"|",c9,"|")
+                print("----------")
+                if c1=="X":
+                    if c2=="X" and c3=="X":
+                        print(a,"is the winnner!!")
+                        break
+                    if c4=="X" and c7=="X":
+                        print(a,"is the winnner!!")
+                        break
+                    if c5=="X" and c9=="X":
+                        print(a,"is the winnner!!")
+                        break
+                elif c2=="X":
+                    if c5=="X" and c8=="X":
+                        print(a,"is the winnner!!")
+                        break
+                elif c3=="X":
+                    if c6=="X" and c9=="X":
+                        print(a,"is the winnner!!")
+                        break
+                    if c5=="X" and c7=="X":
+                        print(a,"is the winnner!!")
+                        break
+                elif c7=="X":
+                    if c8=="X" and c9=="X":
+                        print(a,"is the winnner!!")
+                        break
+                elif c4=="X":
+                    if c5=="X" and c6=="X":
+                        print(a,"is the winnner!!")
+                        break
+                b=l.index(p1)
+                l.pop(b)
+                p2=random.choice(l)
+                c=l.index(p2)
+                l.pop(c)
+                print(p2)
+                if p2==1:
+                    c1="O"
+                elif p2==2:
+                    c2="O"
+                elif p2==3:
+                    c3="O"
+                elif p2==4:
+                    c4="O"
+                elif p2==5:
+                    c5="O"
+                elif p2==6:
+                    c6="O"
+                elif p2==7:
+                    c7="O"
+                elif p2==8:
+                    c8="O"
+                elif p2==9:
+                    c9="O"
+                print("----------")
+                print("|",c1,"|",c2,"|",c3,"|")
+                print("----------")
+                print("|",c4,"|",c5,"|",c6,"|")
+                print("----------")
+                print("|",c7,"|",c8,"|",c9,"|")
+                print("----------")
+                if c1=="O":
+                    if c2=="O" and c3=="O":
+                        print("Bot is the winnner!!")
+                        break
+                    if c4=="O" and c7=="O":
+                        print("Bot is the winner!!")
+                        break
+                    if c5=="O" and c9=="O":
+                        print("Bot is the winner!!")
+                        break
+                elif c2=="O":
+                    if c5=="O" and c8=="O":
+                        print("Bot is the winner!!")
+                        break
+                elif c3=="O":
+                    if c6=="O" and c9=="O":
+                        print("Bot is the winner!!")
+                        break
+                    if c5=="O" and c7=="O":
+                        print("Bot is the winner!!")
+                        break
+                elif c7=="O":
+                    if c8=="O" and c9=="O":
+                        print("Bot is the winner!!")
+                        break
+                elif c4=="O":
+                    if c5=="O" and c6=="O":
+                        print("Bot is the winner!!")
+                        break
+        print("Bot: Do you want to play again?")
+        y=input(a+": ")
+        y=y.lower()
+        if y=="y" or y=="yes":
+            print("Bot: Ok")
+        elif y=="n" or y=="no":
+            print("Bot: Ok, we will play next time if you want")
+            break
+        else:
+            print("Wrong input")
+            break
 elif b=="n" or b=="no":
     print("Bot: Ok, we'll play next time if you want")
 else:
     print("Wrong input")
+
