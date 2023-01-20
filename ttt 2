@@ -28,14 +28,15 @@ if b=="y" or b=="yes":
     print("| 7 | 8 | 9 |")
     print("-------------")
     print("Bot: You have your default has" " X")
-    print("Bot: What mode you want to play(1st or 2nd): ")
+    print("Bot: What mode you want to play 1st mode or 2nd mode: ")
+    print("Bot: 1st mode(computer vs player) and 2nd mode(player1 vs player2)")
     print("Bot: Enter any string(alphabet) for 1st mode and (P) for 2nd mode")
     c=input(a+": ")
     c=c.lower()
     if c=="p":
         print("Bot: 2nd mode")
-        n=input("Bot: Enter your name ")
-        print("Play it's 2nd players turn")
+        n=input("Bot: Enter 2nd player's name ")
+        print("Play it's ",n,"'s turn")
         print("-------------")
         print("| 1 | 2 | 3 |")
         print("-------------")
@@ -100,9 +101,11 @@ if b=="y" or b=="yes":
                 if c5=="O" and c6=="O":
                     print(n," is the winner!!")
                     break
+            b=l.index(p2)
+            l.pop(b)
             p1=int(input(a+": "))
-            d=l.index(p2)
-            l.pop(d)
+            c=l.index(p1)
+            l.pop(c)
             if p1==1:
                 c1="X"
             elif p1==2:
