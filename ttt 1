@@ -76,8 +76,8 @@ if b=="y" or b=="yes":
         b=l.index(p2)
         l.pop(b)
         p1=int(input(a+": "))
-        b=l.index(p1)
-        l.pop(b)
+        c=l.index(p1)
+        l.pop(c)
         if p1==1:
             c1="X"
         elif p1==2:
@@ -106,4 +106,3 @@ if b=="y" or b=="yes":
         print("----------")
         print("|",c7,"|",c8,"|",c9,"|")
         print("----------")
-
