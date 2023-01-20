@@ -33,14 +33,11 @@ if b=="y" or b=="yes":
     c=c.lower()
     if c=="c":
         print("Bot: 1st mode")
-        b=l.index(p1)
-        l.pop(b)
         p2=random.choice(l)
-        b=l.index(p1)
-        l.pop(b)
+        print(p2)
     else:
         print("Bot: 2nd mode")
-        n=input("Bot: Enter your name ")
+        n=input("Bot: Enter 2nd player name ")
         print("Play it's 2nd players turn")
         print("-------------")
         print("| 1 | 2 | 3 |")
@@ -51,7 +48,6 @@ if b=="y" or b=="yes":
         print("-------------")
         p2=int(input(n+":"))
     while True:
-        p2=p2
         if p2==1:
             c1="O"
         elif p2==2:
@@ -77,7 +73,11 @@ if b=="y" or b=="yes":
         print("----------")
         print("|",c7,"|",c8,"|",c9,"|")
         print("----------")
+        b=l.index(p2)
+        l.pop(b)
         p1=int(input(a+": "))
+        b=l.index(p1)
+        l.pop(b)
         if p1==1:
             c1="X"
         elif p1==2:
@@ -106,3 +106,4 @@ if b=="y" or b=="yes":
         print("----------")
         print("|",c7,"|",c8,"|",c9,"|")
         print("----------")
+
